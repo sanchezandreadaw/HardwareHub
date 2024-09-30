@@ -27,9 +27,14 @@ export class PaymentComponent {
     showConfirmAlert('Pago realizado correctamente. ¡Gracias por su compra!');
 
     setTimeout( () => {
+
       sessionStorage.removeItem('cart');
       sessionStorage.clear();
-    },3000)
+  
+      this.router.navigate(['/']).then(() => {
+        window.location.reload();
+      });
+    }, 3000)
 
   }
 
