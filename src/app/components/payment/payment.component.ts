@@ -30,9 +30,8 @@ export class PaymentComponent {
       sessionStorage.removeItem('cart');
       sessionStorage.clear();
   
-      this.router.navigate(['/']).then(() => {
-        window.location.reload();
-      });
+      window.location.reload();
+      
     },3000)
 
   }
