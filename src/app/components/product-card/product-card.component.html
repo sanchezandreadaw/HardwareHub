@@ -1,0 +1,13 @@
+<div class="card h-100 shadow-sm product-card text-center">
+    <div class="product-img-wrapper">
+        <img [src]="product.image" class="card-img-top product-img" alt="{{product.name}}">
+    </div>
+    <div class="card-body d-flex flex-column">
+        <h5 class="card-title fw-bold">{{product.name}}</h5>
+        <p class="card-text text-muted flex-grow-1">{{product.description}}</p>
+        <p class="card-text price-text fw-bold">{{product.price}} €</p>
+        <button class="btn btn-outline-primary mt-auto" (click)="onAddCart(product)">
+            <i class="bi bi-cart-plus"></i> Agregar al carro
+        </button>
+    </div>
+</div>
