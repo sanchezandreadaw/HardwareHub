@@ -29,9 +29,6 @@ export class PaymentComponent {
     setTimeout( () => {
       sessionStorage.removeItem('cart');
       sessionStorage.clear();
-  
-      window.location.reload();
-      
     },3000)
 
   }
