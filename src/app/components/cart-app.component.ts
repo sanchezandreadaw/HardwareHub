@@ -53,7 +53,7 @@ export class CartAppComponent implements OnInit {
         this.items = [... this.items, { product: { ...product }, quantity: 1 }];
       }
 
-      showConfirmAlert();
+      showConfirmAlert('Producto agregado correctamente');
       this.calculateTotal();
       this.saveSession();
 

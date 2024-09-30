@@ -14,11 +14,11 @@ export const showAlertConfirmButton: (item : CartItem) => Promise<SweetAlertResu
 };
 
 
-export const showConfirmAlert : () => void = () => {
+export const showConfirmAlert : (message : string) => void = (message : string) => {
     Swal.fire({
         position: "top",
         icon: "success",
-        title: "Producto agregado correctamente",
+        title: message,
         showConfirmButton: false,
         timer: 1500
       });

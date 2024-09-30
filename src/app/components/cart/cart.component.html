@@ -1,11 +1,11 @@
 <div class="container my-5">
     <div class="card shadow-lg">
-        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
-            <h4 class="card-title m-0">Mi carrito de compras</h4>
-            <span class="badge bg-light text-dark fs-6">{{items.length}} productos</span>
+        <div class="card-header bg-dark text-white">
+            <h4 class="card-title m-0">Proceso de Pago</h4>
         </div>
         <div class="card-body">
             @if(items.length > 0) {
+                <h5 class="mb-4">Detalles de Compra</h5>
                 <div class="row g-3">
                     @for (item of items; track $index) {
                         <div class="col-md-6">
@@ -17,16 +17,20 @@
                                         <p class="card-text fw-bold">Precio: {{item.product.price}} €</p>
                                         <div class="d-flex align-items-center">
                                             <button class="btn btn-outline-secondary btn-sm me-2" 
-                                            (click)="decrementQuantity(item)"
-                                            [disabled]="item.quantity === 1">
-                                            -
+                                                (click)="decrementQuantity(item)" 
+                                                [disabled]="item.quantity === 1">
+                                                -
                                             </button>
                                             <span class="fw-bold">{{item.quantity}}</span>
-                                            <button class="btn btn-outline-secondary btn-sm ms-2" (click)="incrementQuantity(item)">+</button>
+                                            <button class="btn btn-outline-secondary btn-sm ms-2" 
+                                                (click)="incrementQuantity(item)">
+                                                +
+                                            </button>
                                         </div>
                                         <p class="card-text fw-bold mt-2">Total: {{item.product.price * item.quantity}} €</p>
                                     </div>
-                                    <button class="btn btn-danger ms-3" (click)="onDeleteCart(item.product.id)">
+                                    <button class="btn btn-danger ms-3" 
+                                            (click)="onDeleteCart(item.product.id)">
                                         <i class="bi bi-trash"></i>
                                     </button>
                                 </div>
@@ -35,8 +39,9 @@
                     }
                 </div>
                 <hr class="my-4" />
-                <div class="text-end fw-bold">
-                    <h5>Total de compra: <span class="text-primary">{{total}} €</span></h5>
+                <div class="d-flex justify-content-end align-items-center fw-bold gap-3">
+                    <h5>Total a Pagar: <span class="text-primary">{{total}} €</span></h5>
+                    <button class="btn btn-dark" [routerLink]="['/payment']">Proceder al pago</button>
                 </div>
             } @else {
                 <div class="alert alert-warning text-center">
