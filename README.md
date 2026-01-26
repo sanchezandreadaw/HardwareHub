@@ -1,27 +1,70 @@
-# HardwareHub
+🛒 Hardware Hub
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
+Descripción general
 
-## Development server
+Hardware Hub es una aplicación frontend desarrollada con Angular que simula una tienda online de hardware.
+El proyecto permite visualizar un catálogo de productos, añadir artículos al carrito y simular el proceso de compra, ofreciendo una experiencia de usuario clara e intuitiva.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+El objetivo principal del proyecto es demostrar el desarrollo de aplicaciones SPA (Single Page Application) con Angular, gestión de estado en el frontend y diseño de interfaces responsive.
 
-## Code scaffolding
+Funcionalidades principales
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Visualización del catálogo de productos
 
-## Build
+- Detalle de productos desde la vista principal
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Gestión de carrito de compra:
 
-## Running unit tests
+- Añadir productos
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Eliminar productos
 
-## Running end-to-end tests
+- Actualizar cantidades
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Cálculo automático del total del carrito
 
-## Further help
+- Simulación del proceso de compra
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Confirmaciones y alertas visuales mediante SweetAlert
+
+Experiencia de usuario:
+
+- Interfaz responsive basada en Bootstrap
+
+- Navegación fluida sin recarga de página
+
+- Feedback visual claro para acciones del usuario
+
+- Diseño orientado a una experiencia de compra sencilla
+
+- Arquitectura y enfoque técnico
+
+- Aplicación desarrollada como SPA
+
+- Componentes reutilizables
+
+ Separación clara entre:
+
+- Componentes
+
+- Servicios
+
+- Estilos
+
+- Gestión del estado del carrito en el frontend
+
+- Uso de estilos personalizados con CSS
+
+Tecnologías utilizadas:
+
+- Angular
+
+- TypeScript
+
+- HTML5
+
+- CSS3
+
+- Bootstrap
+
+- SweetAlert
